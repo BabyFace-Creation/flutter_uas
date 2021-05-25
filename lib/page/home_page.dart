@@ -26,7 +26,19 @@ class _HomePageState extends State<HomePage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Welcome ' + email),
+        title: Text(
+          'Welcome ' + email,
+          style: TextStyle(fontSize: 16),
+        ),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.delete),
+            onPressed: () {
+              signOutGoogle();
+              Navigator.of(context).pop();
+            },
+          )
+        ],
       ),
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Theme.of(context).primaryColor,
