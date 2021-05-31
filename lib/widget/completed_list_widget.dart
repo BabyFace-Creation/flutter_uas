@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_todo_uas/provider/todos.dart';
-import 'package:flutter_todo_uas/widget/todo_widget.dart';
 import 'package:flutter_todo_uas/widget/todo_widget_completed.dart';
 import 'package:provider/provider.dart';
 

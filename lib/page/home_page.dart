@@ -31,12 +31,14 @@ class _HomePageState extends State<HomePage> {
           style: TextStyle(fontSize: 16),
         ),
         actions: [
-          IconButton(
-            icon: Icon(Icons.delete),
-            onPressed: () {
+          GestureDetector(
+            onTap: () {
               signOutGoogle();
               Navigator.of(context).pop();
             },
+            child: CircleAvatar(
+              backgroundImage: NetworkImage(imageUrl),
+            ),
           )
         ],
       ),
