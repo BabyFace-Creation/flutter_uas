@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           title: title,
           theme: ThemeData(
-            primarySwatch: Colors.pink,
+            primarySwatch: Colors.blue,
             scaffoldBackgroundColor: Color(0xFFf6f5ee),
           ),
           home: LoginPage(),

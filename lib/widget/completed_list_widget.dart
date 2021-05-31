@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_todo_uas/provider/todos.dart';
 import 'package:flutter_todo_uas/widget/todo_widget.dart';
+import 'package:flutter_todo_uas/widget/todo_widget_completed.dart';
 import 'package:provider/provider.dart';
 
 class CompletedListWidget extends StatelessWidget {
@@ -24,7 +25,7 @@ class CompletedListWidget extends StatelessWidget {
             itemBuilder: (context, index) {
               final todo = todos[index];
 
-              return TodoWidget(todo: todo);
+              return TodoWidgetCompleted(todo: todo);
             },
           );
   }
