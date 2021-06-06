@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_todo_uas/api/firebase_api.dart';
-import 'package:flutter_todo_uas/main.dart';
 import 'package:flutter_todo_uas/model/todo.dart';
+import 'package:flutter_todo_uas/page/first_screen.dart';
 import 'package:flutter_todo_uas/provider/sign_in.dart';
 import 'package:flutter_todo_uas/provider/todos.dart';
 import 'package:flutter_todo_uas/widget/add_todo_dialog_widget.dart';
@@ -27,17 +27,23 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Welcome ' + email,
+          'ToDo List',
           style: TextStyle(fontSize: 16),
         ),
         actions: [
           GestureDetector(
             onTap: () {
-              signOutGoogle();
-              Navigator.of(context).pop();
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) {
+                    return FirstScreen();
+                  },
+                ),
+              );
             },
             child: CircleAvatar(
               backgroundImage: NetworkImage(imageUrl),
+              radius: 18,
             ),
           )
         ],
