@@ -46,7 +46,7 @@ class FirstScreen extends StatelessWidget {
                     return LoginPage();
                   }), ModalRoute.withName('/'));
                 },
-                color: Colors.deepPurple,
+                color: Colors.lightBlue,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(

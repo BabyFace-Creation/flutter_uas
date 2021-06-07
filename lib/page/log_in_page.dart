@@ -12,14 +12,22 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        color: Colors.white,
+        color: Colors.white12,
         child: Center(
           child: Column(
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              FlutterLogo(size: 150),
-              SizedBox(height: 50),
+              Text(
+                'ToDo App',
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 80),
+              ),
+              Image(
+                image: AssetImage('assets/images/todo_list.jpg'),
+                height: 200,
+                width: 400,
+              ),
+              SizedBox(height: 30),
               _signInButton(),
             ],
           ),
@@ -59,7 +67,7 @@ class _LoginPageState extends State<LoginPage> {
                 'Sign in with Google',
                 style: TextStyle(
                   fontSize: 20,
-                  color: Colors.grey,
+                  color: Colors.black45,
                 ),
               ),
             )
