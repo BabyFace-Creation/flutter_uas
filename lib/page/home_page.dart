@@ -6,6 +6,7 @@ import 'package:flutter_todo_uas/provider/sign_in.dart';
 import 'package:flutter_todo_uas/provider/todos.dart';
 import 'package:flutter_todo_uas/widget/add_todo_dialog_widget.dart';
 import 'package:flutter_todo_uas/widget/completed_list_widget.dart';
+import 'package:flutter_todo_uas/widget/nav_drawer.dart';
 import 'package:flutter_todo_uas/widget/todo_list_widget.dart';
 import 'package:provider/provider.dart';
 
@@ -25,6 +26,7 @@ class _HomePageState extends State<HomePage> {
     ];
 
     return Scaffold(
+      drawer: NavDrawer(),
       appBar: AppBar(
         title: Text(
           'ToDo List',
@@ -32,15 +34,6 @@ class _HomePageState extends State<HomePage> {
         ),
         actions: [
           GestureDetector(
-            onTap: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (context) {
-                    return FirstScreen();
-                  },
-                ),
-              );
-            },
             child: CircleAvatar(
               backgroundImage: NetworkImage(imageUrl),
               radius: 18,
