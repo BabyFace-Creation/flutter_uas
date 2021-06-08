@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_todo_uas/page/first_screen.dart';
 import 'package:flutter_todo_uas/page/log_in_page.dart';
 import 'package:flutter_todo_uas/provider/sign_in.dart';
 
@@ -17,6 +18,19 @@ class NavDrawer extends StatelessWidget {
             decoration: BoxDecoration(
               color: Colors.blueAccent,
             ),
+          ),
+          ListTile(
+            leading: Icon(Icons.verified_user),
+            title: Text('Profile'),
+            onTap: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) {
+                    return FirstScreen();
+                  },
+                ),
+              );
+            },
           ),
           ListTile(
             leading: Icon(Icons.exit_to_app),
